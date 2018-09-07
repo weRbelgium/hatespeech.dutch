@@ -1,0 +1,22 @@
+Package: hatespeech.dutch
+Type: Package
+Title: Racism Detection in Dutch
+Description: Racism Detection in Dutch based on HADES. A Dictionary-based Approach to Racism Detection in Dutch Social Media.
+Maintainer: Jan Wijffels <jwijffels@bnosac.be>
+Authors@R: c(
+    person("Jan", "Wijffels", role = c("aut", "cre", "cph"), email = "jwijffels@bnosac.be"), 
+    person("BNOSAC", role = "cph"), 
+    person("CLiPS (Computational Linguistics & Psycholinguistics Research Center)", role = "cph")) 
+License: CC BY-SA 4.0
+Version: 1.0
+URL: https://github.com/weRbelgium/hatespeech.dutch
+VignetteBuilder: knitr
+Depends:
+    R (>= 3.0.0)
+Imports:
+    udpipe (>= 0.7),
+    tau,
+    utils
+Suggests:
+    knitr
+RoxygenNote: 6.0.1

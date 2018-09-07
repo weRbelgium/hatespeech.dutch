@@ -1,0 +1,22 @@
+citHeader("When using hatespeech.dutch, please cite both the CLiPS HAte speech DEtection System as well as the hatespeech.dutch R package")
+
+bibentry(bibtype = "InProceedings", 
+         author = "Tulkens, St\'{e}phan and Hilte, Lisa and Lodewyckx, Elise and Verhoeven, Ben and Daelemans, Walter",
+         title =	"A Dictionary-based Approach to Racism Detection in {Dutch} Social Media",
+         booktitle = "Proceedings of the LREC 2016 Workshop on Text Analytics for Cybersecurity and Online Safety (TA-COS)",
+         year = 2016,
+         organization="European Language Resources Association (ELRA)")
+
+
+if(!exists("meta") || is.null(meta)){
+  meta <- packageDescription("hatespeech.dutch")
+}
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry("Manual",
+         title = "hatespeech.dutch: Racism Detection in Dutch",
+         author = c(person("Jan", "Wijffels", email = "jwijffels@bnosac.be")),
+         year = year,
+         note = note,
+         url = "https://github.com/weRbelgium/hatespeech.dutch")

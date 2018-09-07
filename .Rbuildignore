@@ -1,0 +1,5 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+inst/extdata
+README.Rmd
+inst/extdata/dictionary-based-approach.pdf

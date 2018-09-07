@@ -25,5 +25,5 @@ data(dutch_racistspeech)
 racismtypes <- racism_detector(dutch_racistspeech, type = "original")
 }
 \seealso{
-\code{\link{detect_racism}}, \code{\link{dutch_racistspeech}}
+\code{\link{detect_hatespeech}}, \code{\link{dutch_racistspeech}}
 }

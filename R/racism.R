@@ -18,33 +18,33 @@
 #' x <- "Eigen volk gaat voor, want die vuile manieren van de
 #' EU moeten wij vanaf. Geen EU en geen VN. Waardeloos
 #' en tegen onze mensen."
-#' detect_racism(x, detector = racismtypes, type = "tau")
-#' detect_racism(x, detector = racismtypes, type = "udpipe")
+#' detect_hatespeech(x, detector = racismtypes, type = "tau")
+#' detect_hatespeech(x, detector = racismtypes, type = "udpipe")
 #' 
 #' x <- "Burgemeester Termont is voor de zwartzakken die kiezen voor hem"
-#' detect_racism(x, detector = racismtypes, type = "tau")
-#' detect_racism(x, detector = racismtypes, type = "udpipe")
+#' detect_hatespeech(x, detector = racismtypes, type = "tau")
+#' detect_hatespeech(x, detector = racismtypes, type = "udpipe")
 #' 
 #' x <- "Oprotten die luizegaards"
-#' detect_racism(x, detector = racismtypes, type = "tau")
-#' detect_racism(x, detector = racismtypes, type = "udpipe")
+#' detect_hatespeech(x, detector = racismtypes, type = "tau")
+#' detect_hatespeech(x, detector = racismtypes, type = "udpipe")
 #' 
 #' x <- "Wil weer eens lukken dat wij met het vuilste krapuul
 #' zitten, ik verschiet er zelfs niet van!"
-#' detect_racism(x, detector = racismtypes, type = "tau")
-#' detect_racism(x, detector = racismtypes, type = "udpipe")
+#' detect_hatespeech(x, detector = racismtypes, type = "tau")
+#' detect_hatespeech(x, detector = racismtypes, type = "udpipe")
 #' 
 #' x <- "Kan je niets aan doen dat je behoort tot het ras dat
 #' nog minder verstand en gevoelens heeft in uw hersenen
 #' dan het stinkend gat van een VARKEN ! :-p"
-#' detect_racism(x, detector = racismtypes, type = "tau")
-#' detect_racism(x, detector = racismtypes, type = "udpipe")
+#' detect_hatespeech(x, detector = racismtypes, type = "tau")
+#' detect_hatespeech(x, detector = racismtypes, type = "udpipe")
 #' 
 #' x <- "Het zijn precies de vreemden die de haat of het racisme
 #' opwekken bij de autochtonen"
-#' detect_racism(x, detector = racismtypes, type = "tau")
-#' detect_racism(x, detector = racismtypes, type = "udpipe")
-detect_racism <- function(x, detector = racism_detector(), 
+#' detect_hatespeech(x, detector = racismtypes, type = "tau")
+#' detect_hatespeech(x, detector = racismtypes, type = "udpipe")
+detect_hatespeech <- function(x, detector = racism_detector(), 
                           language = "dutch", type = c("tau", "udpipe"), anno = udpipe(x, language), detailed = FALSE){
   stopifnot(length(x) == 1)
   stopifnot(language == "dutch")
@@ -93,7 +93,7 @@ detect_racism <- function(x, detector = racism_detector(),
 #' @export
 #' @return an object of class \code{dutch_racism_terms} which is basically a list of words
 #' which need to be found in the text as is and a regular expression containing hatespeech terms
-#' @seealso \code{\link{detect_racism}}, \code{\link{dutch_racistspeech}}
+#' @seealso \code{\link{detect_hatespeech}}, \code{\link{dutch_racistspeech}}
 #' @examples
 #' racismtypes <- racism_detector(type = "expanded")
 #' 

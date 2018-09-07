@@ -18,57 +18,11 @@ library(tau)
 racismtypes <- racism_detector(type = "expanded")
 
 x <- "Kan je niets aan doen dat je behoort tot het ras dat nog minder verstand en gevoelens heeft in uw hersenen dan het stinkend gat van een VARKEN ! :-p"
-detect_racism(x, detector = racismtypes)
+detect_hatespeech(x, detector = racismtypes)
 ```
 
 ```
-$`Neutral-Country`
-[1] 0
-
-$`Neutral-Migration`
-[1] 0
-
-$`Neutral-Nationality`
-[1] 0
-
-$`Neutral-Religion`
-[1] 0
-
-$`Neutral-Skin_color`
-[1] 0
-
-$`Racist-Animals`
-[1] 0
-
-$`Racist-Country`
-[1] 0
-
-$`Racist-Crime`
-[1] 0
-
-$`Racist-Culture`
-[1] 0
-
-$`Racist-Diseases`
-[1] 0
-
-$`Racist-Migration`
-[1] 0
-
-$`Racist-Nationality`
-[1] 0
-
-$`Racist-Race`
-[1] 1
-
-$`Racist-Religion`
-[1] 0
-
-$`Racist-Skin_color`
-[1] 0
-
-$`Racist-Stereotypes`
-[1] 0
+Error in eval(expr, envir, enclos): could not find function "detect_hatespeech"
 ```
 
 
@@ -77,7 +31,14 @@ library(hatespeech.dutch)
 library(udpipe)
 x <- "Omdat SF het woord hoer vaak benoemt, heb ik er maar halal hoer van gemaakt :zozo: Ik vond 'hoer zo onbeschoft om te benoemen, dus wat verzacht met halal..
 Halal hoer bestaat toch niet? :vreemd:"
-detection <- detect_racism(x, detector = racismtypes, type = "udpipe", detailed = TRUE)
+detection <- detect_hatespeech(x, detector = racismtypes, type = "udpipe", detailed = TRUE)
+```
+
+```
+Error in eval(expr, envir, enclos): could not find function "detect_hatespeech"
+```
+
+```r
 detection[, c("token", "lemma", "Racist-Culture", "Racist-Religion", "Racist-Skin_color")]
 ```
 
@@ -103,7 +64,7 @@ detection[, c("token", "lemma", "Racist-Culture", "Racist-Religion", "Racist-Ski
 
 ## How does this work?
 
-A tokeniser (tau R package or udpipe R package) tokenises the full text in words. The `detect_racism` function next looks for each word or lemma of the word if it is part of the racismtypes dictionary or it looks if it finds a more complex regular expression in the tokenised data.
+A tokeniser (tau R package or udpipe R package) tokenises the full text in words. The `detect_hatespeech` function next looks for each word or lemma of the word if it is part of the racismtypes dictionary or it looks if it finds a more complex regular expression in the tokenised data.
 An example dictionary for racist-religion looks as follows:
 
 

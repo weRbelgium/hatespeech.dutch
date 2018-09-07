@@ -1,8 +1,8 @@
-# Racism Detection in Dutch with R
+# Hate Speech Detection in Dutch with R
 
-Racism Detection in Dutch with R based on the CLiPS HAte speech DEtection System dataset. The dataset provides a dictionary of racist language used in Dutch, provided under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+Hate Speech Detection in Dutch with R based on the CLiPS HAte speech DEtection System dataset. The dataset provides a dictionary of racist language used in Dutch, provided under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
-- The  **hatespeech.dutch** package provides the dataset in R format and provides R functions to easily work detect racism in the Dutch language. 
+- The  **hatespeech.dutch** package provides the dataset in R format and provides R functions to easily work detect hate speech in the Dutch language. 
 
 - The package allows to **detect the 16 categories of hatespeech**: 
 Neutral-Country, Neutral-Migration, Neutral-Nationality, Neutral-Religion, Neutral-Skin_color, Racist-Animals, Racist-Country, Racist-Crime, Racist-Culture, Racist-Diseases, Racist-Migration, Racist-Nationality, Racist-Race, Racist-Religion, Racist-Skin_color, Racist-Stereotypes

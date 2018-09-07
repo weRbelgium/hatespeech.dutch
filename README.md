@@ -22,7 +22,53 @@ detect_hatespeech(x, detector = racismtypes)
 ```
 
 ```
-Error in eval(expr, envir, enclos): could not find function "detect_hatespeech"
+$`Neutral-Country`
+[1] 0
+
+$`Neutral-Migration`
+[1] 0
+
+$`Neutral-Nationality`
+[1] 0
+
+$`Neutral-Religion`
+[1] 0
+
+$`Neutral-Skin_color`
+[1] 0
+
+$`Racist-Animals`
+[1] 0
+
+$`Racist-Country`
+[1] 0
+
+$`Racist-Crime`
+[1] 0
+
+$`Racist-Culture`
+[1] 0
+
+$`Racist-Diseases`
+[1] 0
+
+$`Racist-Migration`
+[1] 0
+
+$`Racist-Nationality`
+[1] 0
+
+$`Racist-Race`
+[1] 1
+
+$`Racist-Religion`
+[1] 0
+
+$`Racist-Skin_color`
+[1] 0
+
+$`Racist-Stereotypes`
+[1] 0
 ```
 
 
@@ -32,13 +78,6 @@ library(udpipe)
 x <- "Omdat SF het woord hoer vaak benoemt, heb ik er maar halal hoer van gemaakt :zozo: Ik vond 'hoer zo onbeschoft om te benoemen, dus wat verzacht met halal..
 Halal hoer bestaat toch niet? :vreemd:"
 detection <- detect_hatespeech(x, detector = racismtypes, type = "udpipe", detailed = TRUE)
-```
-
-```
-Error in eval(expr, envir, enclos): could not find function "detect_hatespeech"
-```
-
-```r
 detection[, c("token", "lemma", "Racist-Culture", "Racist-Religion", "Racist-Skin_color")]
 ```
 
@@ -59,7 +98,7 @@ detection[, c("token", "lemma", "Racist-Culture", "Racist-Religion", "Racist-Ski
 13      halal      halal           TRUE            TRUE             FALSE
 14       hoer       hoer          FALSE           FALSE              TRUE
 15        van        van          FALSE           FALSE             FALSE
-...
+..
 ```
 
 ## How does this work?
